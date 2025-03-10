@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-class Bicycle {
+class Bicycle implements Vehicle {
     private $costPerKm;
     private $fuelType;
 
@@ -17,5 +17,9 @@ class Bicycle {
 
     public function getFuelType() {
         return $this->fuelType;
+    }
+
+    public function getType(): string {
+        return "Bicycle";
     }
 }
